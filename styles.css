@@ -1,0 +1,79 @@
+html * {
+  box-sizing: border-box;
+}
+
+body {
+	background: gray;
+	color: white;
+	font-size: 3em;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 10px;
+}
+
+img {
+	width: 100px;
+}
+
+
+.container {
+  width: 80vw;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . . . ㅛ . . . . ."
+    ". . . . . . . . . . ."
+    ". . . . . ㅗ ㅚ ㅙ ㅘ . ."
+    ". . . . . . . . . . ."
+    ". ㅖ . ㅔ . ㅡ . ㅐ . ㅒ ."
+    "ㅕ . ㅓ . ㅣ ㅇ ㅣ2 . ㅏ . ㅑ"
+    ". . . . . ㅡ2 ㅢ . . . ."
+    ". . . . . . . . . . ."
+    ". . ㅝ ㅞ . ㅜ ㅟ . . . ."
+    ". . . . . . . . . . ."
+    ". . . . . ㅠ . . . . .";
+}
+
+.ㅇ { grid-area: ㅇ; background: none; color: black; }
+.ㅣ { grid-area: ㅣ; background: none; color: black; }
+.ㅣ2 { grid-area: ㅣ2; background: none; color: black; } 
+.ㅡ { grid-area: ㅡ; background: none; color: black; }
+.ㅡ2 { grid-area: ㅡ2; background: none; color: black; }
+.ㅛ { grid-area: ㅛ; background: none; color: blue; }
+.ㅗ { grid-area: ㅗ; background: none; color: red; }
+.ㅜ { grid-area: ㅜ; background: none; color: red; }
+.ㅠ { grid-area: ㅠ; background: none; color: blue; }
+.ㅓ { grid-area: ㅓ; background: none; color: red; }
+.ㅕ { grid-area: ㅕ; background: none; color: blue; }
+.ㅏ { grid-area: ㅏ; background: none; color: red; }
+.ㅑ { grid-area: ㅑ; background: none; color: blue; }
+.ㅝ { grid-area: ㅝ; background: none; color: green; }
+.ㅞ { grid-area: ㅞ; background: none; color: green; }
+.ㅟ { grid-area: ㅟ; background: none; color: green; }
+.ㅢ { grid-area: ㅢ; background: none; color: green; }
+.ㅐ { grid-area: ㅐ; background: none; color: yellow; }
+.ㅒ { grid-area: ㅒ; background: none; color: yellow; }
+.ㅚ { grid-area: ㅚ; background: none; color: green; }
+.ㅙ { grid-area: ㅙ; background: none; color: green; }
+.ㅘ { grid-area: ㅘ; background: none; color: green; }
+.ㅔ { grid-area: ㅔ; background: none; color: yellow; }
+.ㅖ { grid-area: ㅖ; background: none; color: yellow; }
+
+
+
+.container div {
+  /* border: 1px solid black; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
