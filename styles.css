@@ -7,10 +7,9 @@ body {
 	color: white;
   margin: 0;
 }
-
 h1 {
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
   margin: 10px;
 }
 
@@ -31,6 +30,7 @@ hr {
   font-size: 4vw;
   font-weight: bold;
   /* margin: 0 auto; */
+  width: 75%;
   max-height: 40vh;
   max-width: 80vw;
   display: grid;
@@ -129,14 +129,36 @@ black/north/water
 .consonants .ㅇ { grid-area: ㅇ; background: none; color: #0a3947; }
 
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
   main {
     flex-direction: row;
+  }
+  h1 {
+    font-size: 2em;
+    margin: 0;
   }
   hr {
     display: none;
   }
   .vowels, .consonants {
+    width: 45%;
+    max-height: 80vh;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  main {
+    flex-direction: row;
+  }
+  h1 {
+    font-size: 3em;
+    margin: 10px;
+  }
+  hr {
+    display: none;
+  }
+  .vowels, .consonants {
+    width: 45%;
     max-height: 80vh;
   }
 }
