@@ -5,29 +5,48 @@ html * {
 body {
 	background: gray;
 	color: white;
-	font-size: 3em;
-  font-weight: bold;
+  margin: 0;
 }
 
 h1 {
-  font-size: 2em;
+  text-align: center;
+  font-size: 3em;
   margin: 10px;
 }
 
-img {
-	width: 100px;
+main {
+  height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
 }
 
+hr {
+  width: 95vw;
+}
 
-.container {
-  width: 80vw;
-  height: 100%;
-  margin: 0 auto;
+.vowels, .consonants {
+  /* font-size: 3em; */
+  font-size: 4vw;
+  font-weight: bold;
+  /* margin: 0 auto; */
+  max-height: 40vh;
+  max-width: 80vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
-  grid-auto-flow: row;
+  overflow: hidden;
+  border: 1px solid #575757;
+}
+
+/* img {
+	width: 100px;
+} */
+
+.vowels {
+  margin: 20px auto 20px auto;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
   grid-template-areas:
     ". . . . . ㅛ . . . . ."
     ". . . . . . . . . . ."
@@ -42,52 +61,10 @@ img {
     ". . . . . ㅠ . . . . .";
 }
 
-.ㅇ { grid-area: ㅇ; background: none; color: black; }
-.ㅣ { grid-area: ㅣ; background: none; color: black; }
-.ㅣ2 { grid-area: ㅣ2; background: none; color: black; } 
-.ㅡ { grid-area: ㅡ; background: none; color: black; }
-.ㅡ2 { grid-area: ㅡ2; background: none; color: black; }
-.ㅛ { grid-area: ㅛ; background: none; color: blue; }
-.ㅗ { grid-area: ㅗ; background: none; color: red; }
-.ㅜ { grid-area: ㅜ; background: none; color: red; }
-.ㅠ { grid-area: ㅠ; background: none; color: blue; }
-.ㅓ { grid-area: ㅓ; background: none; color: red; }
-.ㅕ { grid-area: ㅕ; background: none; color: blue; }
-.ㅏ { grid-area: ㅏ; background: none; color: red; }
-.ㅑ { grid-area: ㅑ; background: none; color: blue; }
-.ㅝ { grid-area: ㅝ; background: none; color: green; }
-.ㅞ { grid-area: ㅞ; background: none; color: green; }
-.ㅟ { grid-area: ㅟ; background: none; color: green; }
-.ㅢ { grid-area: ㅢ; background: none; color: green; }
-.ㅐ { grid-area: ㅐ; background: none; color: yellow; }
-.ㅒ { grid-area: ㅒ; background: none; color: yellow; }
-.ㅚ { grid-area: ㅚ; background: none; color: green; }
-.ㅙ { grid-area: ㅙ; background: none; color: green; }
-.ㅘ { grid-area: ㅘ; background: none; color: green; }
-.ㅔ { grid-area: ㅔ; background: none; color: yellow; }
-.ㅖ { grid-area: ㅖ; background: none; color: yellow; }
-
-
-
-.container div {
-  /* border: 1px solid black; */
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-.container2 {  
-  height: 100vh;
-  width: 80vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
+.consonants {
+  margin: 20px auto 20px auto;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   grid-template-areas:
     ". . . . ㅎ . . . ."
     ". . . . . . . . ."
@@ -98,18 +75,68 @@ img {
     ". . . . ㅊ . . . .";
 }
 
+/* 
+https://en.wikipedia.org/wiki/Obangsaek
+https://en.wikipedia.org/wiki/Dancheong
 
-.ㅁ { grid-area: ㅁ; background: none; color: black; }
-.ㄴ { grid-area: ㄴ; background: none; color: black; }
-.ㅇ { grid-area: ㅇ; background: none; color: black; }
-.ㄱ { grid-area: ㄱ; background: none; color: green; } 
-.ㅋ { grid-area: ㅋ; background: none; color: green; } 
-.ㅎ { grid-area: ㅎ; background: none; color: cyan; }
-.ㅅ { grid-area: ㅅ; background: none; color: orange; }
-.ㅈ { grid-area: ㅈ; background: none; color: purple; }
-.ㅊ { grid-area: ㅊ; background: none; color: purple; }
-.ㄷ { grid-area: ㄷ; background: none; color: red; }
-.ㅌ { grid-area: ㅌ; background: none; color: red; }
-.ㄹ { grid-area: ㄹ; background: none; color: blue; }
-.ㅂ { grid-area: ㅂ; background: none; color: yellow; }
-.ㅍ { grid-area: ㅍ; background: none; color: yellow; }
+blue/east/wood
+red/south/fire
+yellow/center/earth
+white/west/metal
+black/north/water 
+*/
+
+/* vowels */
+.ㅣ { grid-area: ㅣ; background: none; color: white; }
+.ㅓ { grid-area: ㅓ; background: none; color: white; }
+.ㅕ { grid-area: ㅕ; background: none; color: white; }
+.ㅣ2 { grid-area: ㅣ2; background: none; color: #00479f; } 
+.ㅏ { grid-area: ㅏ; background: none; color: #00479f; }
+.ㅑ { grid-area: ㅑ; background: none; color: #00479f; }
+.ㅡ2 { grid-area: ㅡ2; background: none; color: #ca2e3a; }
+.ㅜ { grid-area: ㅜ; background: none; color: #ca2e3a; }
+.ㅠ { grid-area: ㅠ; background: none; color: #ca2e3a; }
+.ㅡ { grid-area: ㅡ; background: none; color: #0a3947; }
+.ㅗ { grid-area: ㅗ; background: none; color: #0a3947; }
+.ㅛ { grid-area: ㅛ; background: none; color: #0a3947; }
+.ㅝ { grid-area: ㅝ; background: none; color: #7FC29B; }
+.ㅞ { grid-area: ㅞ; background: none; color: #7FC29B; }
+.ㅟ { grid-area: ㅟ; background: none; color: #7FC29B; }
+.ㅢ { grid-area: ㅢ; background: none; color: #7FC29B; }
+.ㅐ { grid-area: ㅐ; background: none; color: #FA8A40; }
+.ㅒ { grid-area: ㅒ; background: none; color: #FA8A40; }
+.ㅚ { grid-area: ㅚ; background: none; color: #7FC29B; }
+.ㅙ { grid-area: ㅙ; background: none; color: #7FC29B; }
+.ㅘ { grid-area: ㅘ; background: none; color: #7FC29B; }
+.ㅔ { grid-area: ㅔ; background: none; color: #FA8A40; }
+.ㅖ { grid-area: ㅖ; background: none; color: #FA8A40; }
+.ㅇ { grid-area: ㅇ; background: none; color: #e9b43a; }
+
+/* consonants */
+.ㅁ { grid-area: ㅁ; background: none; color: #e9b43a; }
+.ㄱ { grid-area: ㄱ; background: none; color: #00479f; }
+.ㅋ { grid-area: ㅋ; background: none; color: #00479f; }
+.ㅂ { grid-area: ㅂ; background: none; color: #00479f; }
+.ㅍ { grid-area: ㅍ; background: none; color: #00479f; }
+.ㄴ { grid-area: ㄴ; background: none; color: white; }
+.ㄷ { grid-area: ㄷ; background: none; color: white; }
+.ㅌ { grid-area: ㅌ; background: none; color: white; }
+.ㄹ { grid-area: ㄹ; background: none; color: white; }
+.ㅅ { grid-area: ㅅ; background: none; color: #ca2e3a; }
+.ㅈ { grid-area: ㅈ; background: none; color: #ca2e3a; }
+.ㅊ { grid-area: ㅊ; background: none; color: #ca2e3a; }
+.ㅎ { grid-area: ㅎ; background: none; color: #0a3947; }
+.consonants .ㅇ { grid-area: ㅇ; background: none; color: #0a3947; }
+
+
+@media only screen and (min-width: 1000px) {
+  main {
+    flex-direction: row;
+  }
+  hr {
+    display: none;
+  }
+  .vowels, .consonants {
+    max-height: 80vh;
+  }
+}
