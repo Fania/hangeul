@@ -1,9 +1,11 @@
 html * {
   box-sizing: border-box;
+  --fontSize: 4vw;
+  color-scheme: dark only;
 }
 
 body {
-	background: gray;
+	background: #5a5979;
 	color: white;
   margin: 0;
 }
@@ -25,18 +27,30 @@ hr {
   width: 95vw;
 }
 
+.tmp {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 .vowels, .consonants {
-  /* font-size: 3em; */
-  font-size: 4vw;
+  font-size: var(--fontSize);
   font-weight: bold;
-  /* margin: 0 auto; */
   width: 75%;
   max-height: 40vh;
   max-width: 80vw;
   display: grid;
   gap: 0px 0px;
   overflow: hidden;
-  border: 1px solid #575757;
+  border: 1px solid white;
+  border-radius: 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+.vowels div, .consonants div {
+  /* height: var(--fontSize); */
+  width: var(--fontSize);
 }
 
 /* img {
