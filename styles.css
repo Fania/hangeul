@@ -1,3 +1,9 @@
+/* @font-face {
+  font-family: 'BlackHanSans-Regular';
+  font-style: normal;
+  src: url('BlackHanSans-Regular.ttf');
+} */
+
 html * {
   box-sizing: border-box;
   --fontSize: 4vw;
@@ -15,12 +21,13 @@ h1 {
   margin: 10px;
 }
 
-main {
+main, .table-block {
   height: 90vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 hr {
@@ -40,6 +47,7 @@ hr {
   max-height: 40vh;
   max-width: 80vw;
   display: grid;
+  padding: 10px;
   gap: 0px 0px;
   overflow: hidden;
   border: 1px solid white;
@@ -52,6 +60,53 @@ hr {
   /* height: var(--fontSize); */
   width: var(--fontSize);
 }
+
+/* .syllables:nth-child(1), 
+.syllables:nth-child(2), 
+.syllables:nth-child(3), 
+.syllables:nth-child(4), 
+.syllables:nth-child(5)  */
+/* .syllables:nth-child(6), 
+.syllables:nth-child(7), 
+.syllables:nth-child(8), 
+.syllables:nth-child(9), 
+.syllables:nth-child(10), 
+.syllables:nth-child(11), 
+.syllables:nth-child(12), 
+.syllables:nth-child(13), 
+.syllables:nth-child(14), 
+.syllables:nth-child(15), 
+.syllables:nth-child(16), 
+.syllables:nth-child(17), 
+.syllables:nth-child(18), 
+.syllables:nth-child(19), 
+.syllables:nth-child(20), 
+.syllables:nth-child(21),
+.syllables:nth-child(22),
+.syllables:nth-child(23),
+.syllables:nth-child(24),
+.syllables:nth-child(25),
+.syllables:nth-child(26),
+.syllables:nth-child(27),
+.syllables:nth-child(28),
+.syllables:nth-child(29),
+.syllables:nth-child(30),
+.syllables:nth-child(31),
+.syllables:nth-child(32),
+.syllables:nth-child(33),
+.syllables:nth-child(34),
+.syllables:nth-child(35),
+.syllables:nth-child(36),
+.syllables:nth-child(37),
+.syllables:nth-child(38),
+.syllables:nth-child(39),
+.syllables:nth-child(40) */
+/* { */
+  /* font-size: 1.65em; */
+  /* font-weight: bolder; */
+  /* font-weight: normal; */
+  /* font-family: 'BlackHanSans-Regular'; */
+/* } */
 
 /* img {
 	width: 100px;
@@ -88,6 +143,58 @@ hr {
     ". . . . ㅈ . . . ."
     ". . . . ㅊ . . . .";
 }
+
+
+.syllables {
+  display: grid;
+  padding: 10px;
+  font-size: 3vw;
+  font-weight: bold;
+  width: 90%;
+  height: 100%;
+  max-height: 80vh;
+  max-width: 85vw;
+  display: grid;
+  gap: 0px 0px;
+  /* overflow: hidden; */
+  border: 1px solid white;
+  border-radius: 5px;
+  justify-items: center;
+  align-items: center;
+  margin: 20px auto 20px auto;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(22, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". ㄱ ㄲ ㄴ ㄷ ㄸ ㄹ ㅁ ㅂ ㅃ ㅅ ㅆ ㅇ ㅈ ㅉ ㅊ ㅋ ㅌ ㅍ ㅎ"
+    "ㅏ 가 까 나 다 따 라 마 바 빠 사 싸 아 자 짜 차 카 타 파 하"
+    "ㅐ 개 깨 내 대 때 래 매 배 빼 새 쌔 애 재 째 채 캐 태 패 해"
+    "ㅑ 갸 꺄 냐 댜 땨 랴 먀 뱌 뺘 샤 쌰 야 쟈 쨔 챠 캬 탸 퍄 햐"
+    "ㅒ 걔 꺠 냬 댸 떄 럐 먜 뱨 뺴 섀 썌 얘 쟤 쨰 챼 컈 턔 퍠 햬"
+    "ㅓ 거 꺼 너 더 떠 러 머 버 뻐 서 써 어 저 쩌 처 커 터 퍼 허"
+    "ㅔ 게 께 네 데 떼 레 메 베 뻬 세 쎄 에 제 쩨 체 케 테 페 헤"
+    "ㅕ 겨 껴 녀 뎌 뗘 려 며 벼 뼈 셔 쎠 여 져 쪄 쳐 켜 텨 펴 혀"
+    "ㅖ 계 꼐 녜 뎨 뗴 례 몌 볘 뼤 셰 쎼 예 졔 쪠 쳬 켸 톄 폐 혜"
+    "ㅗ 고 꼬 노 도 또 로 모 보 뽀 소 쏘 오 조 쪼 초 코 토 포 호"
+    "ㅘ 과 꽈 놔 돠 똬 롸 뫄 봐 뽜 솨 쏴 와 좌 쫘 촤 콰 톼 퐈 화"
+    "ㅙ 괘 꽤 놰 돼 뙈 뢔 뫠 봬 뽸 쇄 쐐 왜 좨 쫴 쵀 쾌 퇘 퐤 홰"
+    "ㅚ 괴 꾀 뇌 되 뙤 뢰 뫼 뵈 뾔 쇠 쐬 외 죄 쬐 최 쾨 퇴 푀 회"
+    "ㅛ 교 꾜 뇨 됴 뚀 료 묘 뵤 뾰 쇼 쑈 요 죠 쬬 쵸 쿄 툐 표 효"
+    "ㅜ 구 꾸 누 두 뚜 루 무 부 뿌 수 쑤 우 주 쭈 추 쿠 투 푸 후"
+    "ㅝ 궈 꿔 눠 둬 뚸 뤄 뭐 붜 뿨 숴 쒀 워 줘 쭤 춰 쿼 퉈 풔 훠"
+    "ㅞ 궤 꿰 눼 뒈 뛔 뤠 뭬 붸 쀄 쉐 쒜 웨 줴 쮀 췌 퀘 퉤 풰 훼"
+    "ㅟ 귀 뀌 뉘 뒤 뛰 뤼 뮈 뷔 쀠 쉬 쒸 위 쥐 쮜 취 퀴 튀 퓌 휘"
+    "ㅠ 규 뀨 뉴 듀 뜌 류 뮤 뷰 쀼 슈 쓔 유 쥬 쮸 츄 큐 튜 퓨 휴"
+    "ㅡ 그 끄 느 드 뜨 르 므 브 쁘 스 쓰 으 즈 쯔 츠 크 트 프 흐"
+    "ㅢ 긔 끠 늬 듸 띄 릐 믜 븨 쁴 싀 씌 의 즤 쯰 츼 킈 틔 픠 희"
+    "ㅣ 기 끼 니 디 띠 리 미 비 삐 시 씨 이 지 찌 치 키 티 피 히";
+}
+
+
+
+
+
 
 /* 
 https://en.wikipedia.org/wiki/Obangsaek
@@ -142,6 +249,471 @@ black/north/water
 .ㅎ { grid-area: ㅎ; background: none; color: #0a3947; }
 .consonants .ㅇ { grid-area: ㅇ; background: none; color: #0a3947; }
 
+/* syllables */
+/* column */
+.syllables .ㅏ { grid-area: ㅏ; background: none; color: #00479f; }
+.syllables .ㅐ { grid-area: ㅐ; background: none; color: #00479f; }
+.syllables .ㅑ { grid-area: ㅑ; background: none; color: #00479f; }
+.syllables .ㅒ { grid-area: ㅒ; background: none; color: #00479f; }
+.syllables .ㅓ { grid-area: ㅓ; background: none; color: #00479f; }
+.syllables .ㅔ { grid-area: ㅔ; background: none; color: #00479f; }
+.syllables .ㅕ { grid-area: ㅕ; background: none; color: #00479f; }
+.syllables .ㅖ { grid-area: ㅖ; background: none; color: #00479f; }
+.syllables .ㅗ { grid-area: ㅗ; background: none; color: #00479f; }
+.syllables .ㅘ { grid-area: ㅘ; background: none; color: #00479f; }
+.syllables .ㅙ { grid-area: ㅙ; background: none; color: #00479f; }
+.syllables .ㅚ { grid-area: ㅚ; background: none; color: #00479f; }
+.syllables .ㅛ { grid-area: ㅛ; background: none; color: #00479f; }
+.syllables .ㅜ { grid-area: ㅜ; background: none; color: #00479f; }
+.syllables .ㅝ { grid-area: ㅝ; background: none; color: #00479f; }
+.syllables .ㅞ { grid-area: ㅞ; background: none; color: #00479f; }
+.syllables .ㅟ { grid-area: ㅟ; background: none; color: #00479f; }
+.syllables .ㅠ { grid-area: ㅠ; background: none; color: #00479f; }
+.syllables .ㅡ { grid-area: ㅡ; background: none; color: #00479f; }
+.syllables .ㅢ { grid-area: ㅢ; background: none; color: #00479f; }
+.syllables .ㅣ { grid-area: ㅣ; background: none; color: #00479f; }
+/* row 1 */
+.syllables .ㄱ { grid-area: ㄱ; background: none; color: #0a3947; }
+.syllables .ㄲ { grid-area: ㄲ; background: none; color: #0a3947; }
+.syllables .ㄴ { grid-area: ㄴ; background: none; color: #0a3947; }
+.syllables .ㄷ { grid-area: ㄷ; background: none; color: #0a3947; }
+.syllables .ㄸ { grid-area: ㄸ; background: none; color: #0a3947; }
+.syllables .ㄹ { grid-area: ㄹ; background: none; color: #0a3947; }
+.syllables .ㅁ { grid-area: ㅁ; background: none; color: #0a3947; }
+.syllables .ㅂ { grid-area: ㅂ; background: none; color: #0a3947; }
+.syllables .ㅃ { grid-area: ㅃ; background: none; color: #0a3947; }
+.syllables .ㅅ { grid-area: ㅅ; background: none; color: #0a3947; }
+.syllables .ㅆ { grid-area: ㅆ; background: none; color: #0a3947; }
+.syllables .ㅇ { grid-area: ㅇ; background: none; color: #0a3947; }
+.syllables .ㅈ { grid-area: ㅈ; background: none; color: #0a3947; }
+.syllables .ㅉ { grid-area: ㅉ; background: none; color: #0a3947; }
+.syllables .ㅊ { grid-area: ㅊ; background: none; color: #0a3947; }
+.syllables .ㅋ { grid-area: ㅋ; background: none; color: #0a3947; }
+.syllables .ㅌ { grid-area: ㅌ; background: none; color: #0a3947; }
+.syllables .ㅍ { grid-area: ㅍ; background: none; color: #0a3947; }
+.syllables .ㅎ { grid-area: ㅎ; background: none; color: #0a3947; }
+/* row 2 */
+.syllables .가 { grid-area: 가; }
+.syllables .까 { grid-area: 까; }
+.syllables .나 { grid-area: 나; }
+.syllables .다 { grid-area: 다; }
+.syllables .따 { grid-area: 따; }
+.syllables .라 { grid-area: 라; }
+.syllables .마 { grid-area: 마; }
+.syllables .바 { grid-area: 바; }
+.syllables .빠 { grid-area: 빠; }
+.syllables .사 { grid-area: 사; }
+.syllables .싸 { grid-area: 싸; }
+.syllables .아 { grid-area: 아; }
+.syllables .자 { grid-area: 자; }
+.syllables .짜 { grid-area: 짜; }
+.syllables .차 { grid-area: 차; }
+.syllables .카 { grid-area: 카; }
+.syllables .타 { grid-area: 타; }
+.syllables .파 { grid-area: 파; }
+.syllables .하 { grid-area: 하; }
+/* row 3 */
+.syllables .개 { grid-area: 개; }
+.syllables .깨 { grid-area: 깨; }
+.syllables .내 { grid-area: 내; }
+.syllables .대 { grid-area: 대; }
+.syllables .때 { grid-area: 때; }
+.syllables .래 { grid-area: 래; }
+.syllables .매 { grid-area: 매; }
+.syllables .배 { grid-area: 배; }
+.syllables .빼 { grid-area: 빼; }
+.syllables .새 { grid-area: 새; }
+.syllables .쌔 { grid-area: 쌔; }
+.syllables .애 { grid-area: 애; }
+.syllables .재 { grid-area: 재; }
+.syllables .째 { grid-area: 째; }
+.syllables .채 { grid-area: 채; }
+.syllables .캐 { grid-area: 캐; }
+.syllables .태 { grid-area: 태; }
+.syllables .패 { grid-area: 패; }
+.syllables .해 { grid-area: 해; }
+/* row 4 */
+.syllables .갸 { grid-area: 갸; }
+.syllables .꺄 { grid-area: 꺄; }
+.syllables .냐 { grid-area: 냐; }
+.syllables .댜 { grid-area: 댜; }
+.syllables .땨 { grid-area: 땨; }
+.syllables .랴 { grid-area: 랴; }
+.syllables .먀 { grid-area: 먀; }
+.syllables .뱌 { grid-area: 뱌; }
+.syllables .뺘 { grid-area: 뺘; }
+.syllables .샤 { grid-area: 샤; }
+.syllables .쌰 { grid-area: 쌰; }
+.syllables .야 { grid-area: 야; }
+.syllables .쟈 { grid-area: 쟈; }
+.syllables .쨔 { grid-area: 쨔; }
+.syllables .챠 { grid-area: 챠; }
+.syllables .캬 { grid-area: 캬; }
+.syllables .탸 { grid-area: 탸; }
+.syllables .퍄 { grid-area: 퍄; }
+.syllables .햐 { grid-area: 햐; }
+/* row 5 */
+.syllables .걔 { grid-area: 걔; }
+.syllables .꺠 { grid-area: 꺠; }
+.syllables .냬 { grid-area: 냬; }
+.syllables .댸 { grid-area: 댸; }
+.syllables .떄 { grid-area: 떄; }
+.syllables .럐 { grid-area: 럐; }
+.syllables .먜 { grid-area: 먜; }
+.syllables .뱨 { grid-area: 뱨; }
+.syllables .뺴 { grid-area: 뺴; }
+.syllables .섀 { grid-area: 섀; }
+.syllables .썌 { grid-area: 썌; }
+.syllables .얘 { grid-area: 얘; }
+.syllables .쟤 { grid-area: 쟤; }
+.syllables .쨰 { grid-area: 쨰; }
+.syllables .챼 { grid-area: 챼; }
+.syllables .컈 { grid-area: 컈; }
+.syllables .턔 { grid-area: 턔; }
+.syllables .퍠 { grid-area: 퍠; }
+.syllables .햬 { grid-area: 햬; }
+/* row 6 */
+.syllables .거 { grid-area: 거; }
+.syllables .꺼 { grid-area: 꺼; }
+.syllables .너 { grid-area: 너; }
+.syllables .더 { grid-area: 더; }
+.syllables .떠 { grid-area: 떠; }
+.syllables .러 { grid-area: 러; }
+.syllables .머 { grid-area: 머; }
+.syllables .버 { grid-area: 버; }
+.syllables .뻐 { grid-area: 뻐; }
+.syllables .서 { grid-area: 서; }
+.syllables .써 { grid-area: 써; }
+.syllables .어 { grid-area: 어; }
+.syllables .저 { grid-area: 저; }
+.syllables .쩌 { grid-area: 쩌; }
+.syllables .처 { grid-area: 처; }
+.syllables .커 { grid-area: 커; }
+.syllables .터 { grid-area: 터; }
+.syllables .퍼 { grid-area: 퍼; }
+.syllables .허 { grid-area: 허; }
+/* row 7 */
+.syllables .게 { grid-area: 게; }
+.syllables .께 { grid-area: 께; }
+.syllables .네 { grid-area: 네; }
+.syllables .데 { grid-area: 데; }
+.syllables .떼 { grid-area: 떼; }
+.syllables .레 { grid-area: 레; }
+.syllables .메 { grid-area: 메; }
+.syllables .베 { grid-area: 베; }
+.syllables .뻬 { grid-area: 뻬; }
+.syllables .세 { grid-area: 세; }
+.syllables .쎄 { grid-area: 쎄; }
+.syllables .에 { grid-area: 에; }
+.syllables .제 { grid-area: 제; }
+.syllables .쩨 { grid-area: 쩨; }
+.syllables .체 { grid-area: 체; }
+.syllables .케 { grid-area: 케; }
+.syllables .테 { grid-area: 테; }
+.syllables .페 { grid-area: 페; }
+.syllables .헤 { grid-area: 헤; }
+/* row 8 */
+.syllables .겨 { grid-area: 겨; }
+.syllables .껴 { grid-area: 껴; }
+.syllables .녀 { grid-area: 녀; }
+.syllables .뎌 { grid-area: 뎌; }
+.syllables .뗘 { grid-area: 뗘; }
+.syllables .려 { grid-area: 려; }
+.syllables .며 { grid-area: 며; }
+.syllables .벼 { grid-area: 벼; }
+.syllables .뼈 { grid-area: 뼈; }
+.syllables .셔 { grid-area: 셔; }
+.syllables .쎠 { grid-area: 쎠; }
+.syllables .여 { grid-area: 여; }
+.syllables .져 { grid-area: 져; }
+.syllables .쪄 { grid-area: 쪄; }
+.syllables .쳐 { grid-area: 쳐; }
+.syllables .켜 { grid-area: 켜; }
+.syllables .텨 { grid-area: 텨; }
+.syllables .펴 { grid-area: 펴; }
+.syllables .혀 { grid-area: 혀; }
+/* row 9 */
+.syllables .계 { grid-area: 계; }
+.syllables .꼐 { grid-area: 꼐; }
+.syllables .녜 { grid-area: 녜; }
+.syllables .뎨 { grid-area: 뎨; }
+.syllables .뗴 { grid-area: 뗴; }
+.syllables .례 { grid-area: 례; }
+.syllables .몌 { grid-area: 몌; }
+.syllables .볘 { grid-area: 볘; }
+.syllables .뼤 { grid-area: 뼤; }
+.syllables .셰 { grid-area: 셰; }
+.syllables .쎼 { grid-area: 쎼; }
+.syllables .예 { grid-area: 예; }
+.syllables .졔 { grid-area: 졔; }
+.syllables .쪠 { grid-area: 쪠; }
+.syllables .쳬 { grid-area: 쳬; }
+.syllables .켸 { grid-area: 켸; }
+.syllables .톄 { grid-area: 톄; }
+.syllables .폐 { grid-area: 폐; }
+.syllables .혜 { grid-area: 혜; }
+/* row 10 */
+.syllables .고 { grid-area: 고; }
+.syllables .꼬 { grid-area: 꼬; }
+.syllables .노 { grid-area: 노; }
+.syllables .도 { grid-area: 도; }
+.syllables .또 { grid-area: 또; }
+.syllables .로 { grid-area: 로; }
+.syllables .모 { grid-area: 모; }
+.syllables .보 { grid-area: 보; }
+.syllables .뽀 { grid-area: 뽀; }
+.syllables .소 { grid-area: 소; }
+.syllables .쏘 { grid-area: 쏘; }
+.syllables .오 { grid-area: 오; }
+.syllables .조 { grid-area: 조; }
+.syllables .쪼 { grid-area: 쪼; }
+.syllables .초 { grid-area: 초; }
+.syllables .코 { grid-area: 코; }
+.syllables .토 { grid-area: 토; }
+.syllables .포 { grid-area: 포; }
+.syllables .호 { grid-area: 호; }
+/* row 11 */
+.syllables .과 { grid-area: 과; }
+.syllables .꽈 { grid-area: 꽈; }
+.syllables .놔 { grid-area: 놔; }
+.syllables .돠 { grid-area: 돠; }
+.syllables .똬 { grid-area: 똬; }
+.syllables .롸 { grid-area: 롸; }
+.syllables .뫄 { grid-area: 뫄; }
+.syllables .봐 { grid-area: 봐; }
+.syllables .뽜 { grid-area: 뽜; }
+.syllables .솨 { grid-area: 솨; }
+.syllables .쏴 { grid-area: 쏴; }
+.syllables .와 { grid-area: 와; }
+.syllables .좌 { grid-area: 좌; }
+.syllables .쫘 { grid-area: 쫘; }
+.syllables .촤 { grid-area: 촤; }
+.syllables .콰 { grid-area: 콰; }
+.syllables .톼 { grid-area: 톼; }
+.syllables .퐈 { grid-area: 퐈; }
+.syllables .화 { grid-area: 화; }
+/* row 12 */
+.syllables .괘 { grid-area: 괘; }
+.syllables .꽤 { grid-area: 꽤; }
+.syllables .놰 { grid-area: 놰; }
+.syllables .돼 { grid-area: 돼; }
+.syllables .뙈 { grid-area: 뙈; }
+.syllables .뢔 { grid-area: 뢔; }
+.syllables .뫠 { grid-area: 뫠; }
+.syllables .봬 { grid-area: 봬; }
+.syllables .뽸 { grid-area: 뽸; }
+.syllables .쇄 { grid-area: 쇄; }
+.syllables .쐐 { grid-area: 쐐; }
+.syllables .왜 { grid-area: 왜; }
+.syllables .좨 { grid-area: 좨; }
+.syllables .쫴 { grid-area: 쫴; }
+.syllables .쵀 { grid-area: 쵀; }
+.syllables .쾌 { grid-area: 쾌; }
+.syllables .퇘 { grid-area: 퇘; }
+.syllables .퐤 { grid-area: 퐤; }
+.syllables .홰 { grid-area: 홰; }
+/* row 13 */
+.syllables .괴 { grid-area: 괴; }
+.syllables .꾀 { grid-area: 꾀; }
+.syllables .뇌 { grid-area: 뇌; }
+.syllables .되 { grid-area: 되; }
+.syllables .뙤 { grid-area: 뙤; }
+.syllables .뢰 { grid-area: 뢰; }
+.syllables .뫼 { grid-area: 뫼; }
+.syllables .뵈 { grid-area: 뵈; }
+.syllables .뾔 { grid-area: 뾔; }
+.syllables .쇠 { grid-area: 쇠; }
+.syllables .쐬 { grid-area: 쐬; }
+.syllables .외 { grid-area: 외; }
+.syllables .죄 { grid-area: 죄; }
+.syllables .쬐 { grid-area: 쬐; }
+.syllables .최 { grid-area: 최; }
+.syllables .쾨 { grid-area: 쾨; }
+.syllables .퇴 { grid-area: 퇴; }
+.syllables .푀 { grid-area: 푀; }
+.syllables .회 { grid-area: 회; }
+/* row 14 */
+.syllables .교 { grid-area: 교; }
+.syllables .꾜 { grid-area: 꾜; }
+.syllables .뇨 { grid-area: 뇨; }
+.syllables .됴 { grid-area: 됴; }
+.syllables .뚀 { grid-area: 뚀; }
+.syllables .료 { grid-area: 료; }
+.syllables .묘 { grid-area: 묘; }
+.syllables .뵤 { grid-area: 뵤; }
+.syllables .뾰 { grid-area: 뾰; }
+.syllables .쇼 { grid-area: 쇼; }
+.syllables .쑈 { grid-area: 쑈; }
+.syllables .요 { grid-area: 요; }
+.syllables .죠 { grid-area: 죠; }
+.syllables .쬬 { grid-area: 쬬; }
+.syllables .쵸 { grid-area: 쵸; }
+.syllables .쿄 { grid-area: 쿄; }
+.syllables .툐 { grid-area: 툐; }
+.syllables .표 { grid-area: 표; }
+.syllables .효 { grid-area: 효; }
+/* row 15 */
+.syllables .구 { grid-area: 구; }
+.syllables .꾸 { grid-area: 꾸; }
+.syllables .누 { grid-area: 누; }
+.syllables .두 { grid-area: 두; }
+.syllables .뚜 { grid-area: 뚜; }
+.syllables .루 { grid-area: 루; }
+.syllables .무 { grid-area: 무; }
+.syllables .부 { grid-area: 부; }
+.syllables .뿌 { grid-area: 뿌; }
+.syllables .수 { grid-area: 수; }
+.syllables .쑤 { grid-area: 쑤; }
+.syllables .우 { grid-area: 우; }
+.syllables .주 { grid-area: 주; }
+.syllables .쭈 { grid-area: 쭈; }
+.syllables .추 { grid-area: 추; }
+.syllables .쿠 { grid-area: 쿠; }
+.syllables .투 { grid-area: 투; }
+.syllables .푸 { grid-area: 푸; }
+.syllables .후 { grid-area: 후; }
+/* row 16 */
+.syllables .궈 { grid-area: 궈; }
+.syllables .꿔 { grid-area: 꿔; }
+.syllables .눠 { grid-area: 눠; }
+.syllables .둬 { grid-area: 둬; }
+.syllables .뚸 { grid-area: 뚸; }
+.syllables .뤄 { grid-area: 뤄; }
+.syllables .뭐 { grid-area: 뭐; }
+.syllables .붜 { grid-area: 붜; }
+.syllables .뿨 { grid-area: 뿨; }
+.syllables .숴 { grid-area: 숴; }
+.syllables .쒀 { grid-area: 쒀; }
+.syllables .워 { grid-area: 워; }
+.syllables .줘 { grid-area: 줘; }
+.syllables .쭤 { grid-area: 쭤; }
+.syllables .춰 { grid-area: 춰; }
+.syllables .쿼 { grid-area: 쿼; }
+.syllables .퉈 { grid-area: 퉈; }
+.syllables .풔 { grid-area: 풔; }
+.syllables .훠 { grid-area: 훠; }
+/* row 17 */
+.syllables .궤 { grid-area: 궤; }
+.syllables .꿰 { grid-area: 꿰; }
+.syllables .눼 { grid-area: 눼; }
+.syllables .뒈 { grid-area: 뒈; }
+.syllables .뛔 { grid-area: 뛔; }
+.syllables .뤠 { grid-area: 뤠; }
+.syllables .뭬 { grid-area: 뭬; }
+.syllables .붸 { grid-area: 붸; }
+.syllables .쀄 { grid-area: 쀄; }
+.syllables .쉐 { grid-area: 쉐; }
+.syllables .쒜 { grid-area: 쒜; }
+.syllables .웨 { grid-area: 웨; }
+.syllables .줴 { grid-area: 줴; }
+.syllables .쮀 { grid-area: 쮀; }
+.syllables .췌 { grid-area: 췌; }
+.syllables .퀘 { grid-area: 퀘; }
+.syllables .퉤 { grid-area: 퉤; }
+.syllables .풰 { grid-area: 풰; }
+.syllables .훼 { grid-area: 훼; }
+/* row 18 */
+.syllables .귀 { grid-area: 귀; }
+.syllables .뀌 { grid-area: 뀌; }
+.syllables .뉘 { grid-area: 뉘; }
+.syllables .뒤 { grid-area: 뒤; }
+.syllables .뛰 { grid-area: 뛰; }
+.syllables .뤼 { grid-area: 뤼; }
+.syllables .뮈 { grid-area: 뮈; }
+.syllables .뷔 { grid-area: 뷔; }
+.syllables .쀠 { grid-area: 쀠; }
+.syllables .쉬 { grid-area: 쉬; }
+.syllables .쒸 { grid-area: 쒸; }
+.syllables .위 { grid-area: 위; }
+.syllables .쥐 { grid-area: 쥐; }
+.syllables .쮜 { grid-area: 쮜; }
+.syllables .취 { grid-area: 취; }
+.syllables .퀴 { grid-area: 퀴; }
+.syllables .튀 { grid-area: 튀; }
+.syllables .퓌 { grid-area: 퓌; }
+.syllables .휘 { grid-area: 휘; }
+/* row 19 */
+.syllables .규 { grid-area: 규; }
+.syllables .뀨 { grid-area: 뀨; }
+.syllables .뉴 { grid-area: 뉴; }
+.syllables .듀 { grid-area: 듀; }
+.syllables .뜌 { grid-area: 뜌; }
+.syllables .류 { grid-area: 류; }
+.syllables .뮤 { grid-area: 뮤; }
+.syllables .뷰 { grid-area: 뷰; }
+.syllables .쀼 { grid-area: 쀼; }
+.syllables .슈 { grid-area: 슈; }
+.syllables .쓔 { grid-area: 쓔; }
+.syllables .유 { grid-area: 유; }
+.syllables .쥬 { grid-area: 쥬; }
+.syllables .쮸 { grid-area: 쮸; }
+.syllables .츄 { grid-area: 츄; }
+.syllables .큐 { grid-area: 큐; }
+.syllables .튜 { grid-area: 튜; }
+.syllables .퓨 { grid-area: 퓨; }
+.syllables .휴 { grid-area: 휴; }
+/* row 20 */
+.syllables .그 { grid-area: 그; }
+.syllables .끄 { grid-area: 끄; }
+.syllables .느 { grid-area: 느; }
+.syllables .드 { grid-area: 드; }
+.syllables .뜨 { grid-area: 뜨; }
+.syllables .르 { grid-area: 르; }
+.syllables .므 { grid-area: 므; }
+.syllables .브 { grid-area: 브; }
+.syllables .쁘 { grid-area: 쁘; }
+.syllables .스 { grid-area: 스; }
+.syllables .쓰 { grid-area: 쓰; }
+.syllables .으 { grid-area: 으; }
+.syllables .즈 { grid-area: 즈; }
+.syllables .쯔 { grid-area: 쯔; }
+.syllables .츠 { grid-area: 츠; }
+.syllables .크 { grid-area: 크; }
+.syllables .트 { grid-area: 트; }
+.syllables .프 { grid-area: 프; }
+.syllables .흐 { grid-area: 흐; }
+/* row 21 */
+.syllables .긔 { grid-area: 긔; }
+.syllables .끠 { grid-area: 끠; }
+.syllables .늬 { grid-area: 늬; }
+.syllables .듸 { grid-area: 듸; }
+.syllables .띄 { grid-area: 띄; }
+.syllables .릐 { grid-area: 릐; }
+.syllables .믜 { grid-area: 믜; }
+.syllables .븨 { grid-area: 븨; }
+.syllables .쁴 { grid-area: 쁴; }
+.syllables .싀 { grid-area: 싀; }
+.syllables .씌 { grid-area: 씌; }
+.syllables .의 { grid-area: 의; }
+.syllables .즤 { grid-area: 즤; }
+.syllables .쯰 { grid-area: 쯰; }
+.syllables .츼 { grid-area: 츼; }
+.syllables .킈 { grid-area: 킈; }
+.syllables .틔 { grid-area: 틔; }
+.syllables .픠 { grid-area: 픠; }
+.syllables .희 { grid-area: 희; }
+/* row 22 */
+.syllables .기 { grid-area: 기; }
+.syllables .끼 { grid-area: 끼; }
+.syllables .니 { grid-area: 니; }
+.syllables .디 { grid-area: 디; }
+.syllables .띠 { grid-area: 띠; }
+.syllables .리 { grid-area: 리; }
+.syllables .미 { grid-area: 미; }
+.syllables .비 { grid-area: 비; }
+.syllables .삐 { grid-area: 삐; }
+.syllables .시 { grid-area: 시; }
+.syllables .씨 { grid-area: 씨; }
+.syllables .이 { grid-area: 이; }
+.syllables .지 { grid-area: 지; }
+.syllables .찌 { grid-area: 찌; }
+.syllables .치 { grid-area: 치; }
+.syllables .키 { grid-area: 키; }
+.syllables .티 { grid-area: 티; }
+.syllables .피 { grid-area: 피; }
+.syllables .히 { grid-area: 히; }
+
+
 
 @media only screen and (min-width: 800px) {
   main {
@@ -158,6 +730,10 @@ black/north/water
     width: 45%;
     max-height: 80vh;
   }
+  .syllables {
+    font-size: 2.5vw;
+  }
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -165,7 +741,7 @@ black/north/water
     flex-direction: row;
   }
   h1 {
-    font-size: 3em;
+    font-size: 2em;
     margin: 10px;
   }
   hr {
@@ -174,5 +750,14 @@ black/north/water
   .vowels, .consonants {
     width: 45%;
     max-height: 80vh;
+  }
+  .syllables {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .syllables {
+    font-size: 1vw;
   }
 }
