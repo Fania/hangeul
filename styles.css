@@ -8,7 +8,7 @@ html * {
   box-sizing: border-box;
   --fontSize: 4vw;
   color-scheme: dark only;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
 body {
@@ -44,6 +44,7 @@ hr {
 .vowels, .consonants {
   font-size: var(--fontSize);
   font-weight: bold;
+  text-align: center;
   width: 75%;
   max-height: 40vh;
   max-width: 80vw;
@@ -58,7 +59,9 @@ hr {
 }
 
 .english.vowels {
+  /* font-weight: normal; */
   font-size: calc(var(--fontSize) - 80%);
+  line-height: var(--fontSize);
 }
 
 .vowels div, .consonants div {

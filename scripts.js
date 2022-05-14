@@ -45,8 +45,8 @@ function changeVowels(ev,lang) {
 
 const mc = new Hammer(vowelSection);
 mc.get('swipe').set({ enable: true, direction: Hammer.DIRECTION_HORIZONTAL });
-mc.get('pan').set({ enable: true, direction: Hammer.DIRECTION_HORIZONTAL });
+// mc.get('pan').set({ enable: true, direction: Hammer.DIRECTION_HORIZONTAL });
 mc.on("swipeleft",  (ev) => { changeVowels(ev,"ko"); });
-mc.on("panleft",  (ev) => { changeVowels(ev,"ko"); });
+// mc.on("panleft",  (ev) => { changeVowels(ev,"ko"); });
 mc.on("swiperight", (ev) => { changeVowels(ev,"en"); });
-mc.on("panright", (ev) => { changeVowels(ev,"en"); });
+// mc.on("panright", (ev) => { changeVowels(ev,"en"); });
