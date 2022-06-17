@@ -31,6 +31,22 @@ main, .table-block {
   flex-wrap: wrap;
 }
 
+[data-title] {
+  position: relative;
+}
+[data-title]:hover:after {
+  visibility: visible;
+}
+[data-title]:after {
+  content: attr(data-title);
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  font-size: 1rem;
+}
+
 hr {
   width: 95vw;
 }
@@ -42,6 +58,7 @@ hr {
 }
 
 .vowels, .consonants {
+  /* position: relative; */
   font-size: var(--fontSize);
   font-weight: bold;
   text-align: center;
@@ -51,7 +68,7 @@ hr {
   display: grid;
   padding: 10px;
   gap: 0px 0px;
-  overflow: hidden;
+  /* overflow: hidden; */
   border: 1px solid white;
   border-radius: 5px;
   justify-items: center;
