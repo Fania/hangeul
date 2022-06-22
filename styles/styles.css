@@ -77,7 +77,7 @@ hr {
 
 .english.vowels {
   /* font-weight: normal; */
-  font-size: calc(var(--fontSize) - 80%);
+  font-size: calc(var(--fontSize) - 60%);
   line-height: var(--fontSize);
 }
 
@@ -181,7 +181,7 @@ hr {
   max-width: 85vw;
   display: grid;
   gap: 0px 0px;
-  /* overflow: hidden; */
+  overflow: scroll;
   border: 1px solid white;
   border-radius: 5px;
   justify-items: center;
